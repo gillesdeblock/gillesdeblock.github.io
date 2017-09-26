@@ -1,3 +1,157 @@
+.intro-container {
+  position: relative;
+  height: 100vh;
+  background-image: url("../img/bg_canada_train.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .intro-container .profile-container {
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow: hidden; }
+    @media screen and (max-width: 719px) {
+      .intro-container .profile-container {
+        position: relative;
+        height: 100vh;
+        width: 100%; } }
+    @media screen and (min-width: 720px) {
+      .intro-container .profile-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); } }
+    .intro-container .profile-container .profile {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center; }
+      @media screen and (max-width: 719px) {
+        .intro-container .profile-container .profile {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%); } }
+      @media screen and (min-width: 720px) {
+        .intro-container .profile-container .profile {
+          flex-direction: row; } }
+      .intro-container .profile-container .profile .profile-image {
+        max-height: 250px;
+        max-width: 250px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex: 1 0 auto; }
+        @media screen and (max-width: 719px) {
+          .intro-container .profile-container .profile .profile-image {
+            margin-bottom: 1rem; } }
+        .intro-container .profile-container .profile .profile-image img {
+          height: 100%;
+          transform: translateX(-25%); }
+      .intro-container .profile-container .profile .profile-description {
+        min-width: 300px;
+        padding: 1rem; }
+        @media screen and (max-width: 719px) {
+          .intro-container .profile-container .profile .profile-description {
+            max-height: 250px; } }
+        .intro-container .profile-container .profile .profile-description .title h1 {
+          text-align: center;
+          color: rgba(0, 0, 0, 0.75);
+          border-bottom: 2px solid rgba(0, 0, 0, 0.75);
+          margin-bottom: 16px; }
+        @media screen and (max-width: 719px) {
+          .intro-container .profile-container .profile .profile-description .content {
+            max-height: 200px;
+            overflow-y: auto; } }
+        .intro-container .profile-container .profile .profile-description .content p {
+          margin-bottom: 8px; }
+  .intro-container .portfolio-btn {
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    font-weight: 600;
+    color: #01579B;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: color 0.2s, background-color 0.2s; }
+    @media screen and (max-width: 719px) {
+      .intro-container .portfolio-btn {
+        display: none; } }
+    .intro-container .portfolio-btn:hover {
+      cursor: pointer;
+      color: #0277BD;
+      background-color: rgba(255, 255, 255, 0.75); }
+
+.portfolio-container {
+  position: relative;
+  height: 100vh;
+  background-color: #C4E7FC; }
+  @media medium-width {
+    .portfolio-container {
+      padding: 1rem; } }
+  .portfolio-container h1, .portfolio-container h2, .portfolio-container h3, .portfolio-container h4, .portfolio-container h5 {
+    color: black; }
+  .portfolio-container .recent-work {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    overflow: hidden; }
+    @media screen and (max-width: 719px) {
+      .portfolio-container .recent-work {
+        height: 100vh; } }
+    @media screen and (min-width: 720px) {
+      .portfolio-container .recent-work {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-height: 90%;
+        width: 80%;
+        min-width: calc(250px + 2 * 20px); } }
+    .portfolio-container .recent-work .work-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      margin: 0 .5rem;
+      overflow-x: hidden; }
+      @media screen and (max-width: 719px) {
+        .portfolio-container .recent-work .work-list {
+          max-height: 90%;
+          overflow-y: auto; } }
+      @media screen and (min-width: 720px) {
+        .portfolio-container .recent-work .work-list {
+          max-height: 650px; } }
+      .portfolio-container .recent-work .work-list .work-item {
+        max-width: 280px;
+        flex: 0 0 auto;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+        border-radius: 5px;
+        text-align: center; }
+        .portfolio-container .recent-work .work-list .work-item h3 {
+          width: 75%;
+          margin: 0 auto;
+          margin-bottom: 1rem;
+          padding-bottom: .5rem;
+          font-size: 22px;
+          color: black;
+          border-bottom: 3px solid black; }
+        .portfolio-container .recent-work .work-list .work-item p {
+          overflow-y: auto;
+          margin-bottom: 1rem; }
+        .portfolio-container .recent-work .work-list .work-item a {
+          text-align: center;
+          background-color: #19e859;
+          color: white;
+          padding: .5rem .25rem;
+          transition: background-color .2s ease-out; }
+          .portfolio-container .recent-work .work-list .work-item a:hover {
+            background-color: #19d459; }
+    .portfolio-container .recent-work h1 {
+      width: 250px;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+      text-align: center; }
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +160,8 @@
 html, body {
   font-family: 'Montserrat', 'Open Sans', 'Arial';
   height: 100vh;
-  width: 100%; }
+  width: 100%;
+  min-width: 300px; }
 
 body * {
   display: block; }
@@ -18,96 +173,25 @@ a {
   a:hover {
     color: #0277BD; }
 
-.intro-container {
-  position: relative;
-  height: 100vh;
-  background-image: url("../img/bg_canada_train.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; }
-  .intro-container .profile-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 2em;
-    background-color: rgba(255, 255, 255, 0.5); }
-    .intro-container .profile-container .profile {
-      display: flex;
-      justify-content: flex-start;
-      align-items: start;
-      flex-direction: row; }
-      .intro-container .profile-container .profile .profile-image {
-        display: inline-block;
-        height: 300px;
-        width: 300px;
-        min-width: 300px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin-right: 1em; }
-        .intro-container .profile-container .profile .profile-image img {
-          height: 100%;
-          margin-left: -75px; }
-      .intro-container .profile-container .profile .profile-description {
-        min-width: 50%;
-        padding: 1em;
-        align-self: stretch; }
-        .intro-container .profile-container .profile .profile-description h1 {
-          text-align: center;
-          color: rgba(0, 0, 0, 0.75);
-          border-bottom: 2px solid rgba(0, 0, 0, 0.75);
-          margin-bottom: 16px; }
-        .intro-container .profile-container .profile .profile-description p {
-          margin-bottom: 8px; }
-  .intro-container .portfolio-btn {
-    position: absolute;
-    bottom: 2%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 1em;
-    font-weight: 600;
-    color: #01579B;
-    background-color: rgba(255, 255, 255, 0.5);
-    transition: color 0.2s, background-color 0.2s; }
-    .intro-container .portfolio-btn:hover {
-      cursor: pointer;
-      color: #0277BD;
-      background-color: rgba(255, 255, 255, 0.75); }
+p {
+  white-space: normal;
+  word-break: normal;
+  line-height: 1.25; }
 
-.portfolio-container {
-  position: relative;
-  height: 100vh;
-  padding: 2em;
-  background-color: #B3E5FC; }
-  .portfolio-container .recent-work {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    width: calc(1200px + (20px * 2));
-    background-color: rgba(255, 255, 255, 0.75); }
-    .portfolio-container .recent-work .work-list {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: flex-start; }
-      .portfolio-container .recent-work .work-list .work-item {
-        height: 300px;
-        width: 400px;
-        padding: 1em;
-        text-align: center; }
-        .portfolio-container .recent-work .work-list .work-item h3 {
-          color: rgba(0, 0, 0, 0.75);
-          margin-bottom: 1em;
-          font-size: 22px; }
-        .portfolio-container .recent-work .work-list .work-item p {
-          margin-bottom: 1em; }
-    .portfolio-container .recent-work h1 {
-      width: 250px;
-      margin: 0 auto;
-      padding-bottom: 6px;
-      text-align: center;
-      color: rgba(0, 0, 0, 0.75);
-      border-bottom: 3px solid rgba(0, 0, 0, 0.75); }
+.content {
+  overflow: hidden; }
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  background-color: #B1B1B1; }
+
+::-webkit-scrollbar-track {
+  background-color: #B1B1B1; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #1A1A1A;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
 
 /*# sourceMappingURL=styles.css.map */

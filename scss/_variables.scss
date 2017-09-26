@@ -1,0 +1,18 @@
+// Colors
+$light-blue: #C4E7FC;
+$blue-grey: #718E8C;
+$brown: #AB9484;
+$dark-green: #2F342D;
+
+// Widths, Media Queries...
+$mobile-screen-width: "screen and (max-width: 720px)";
+$tablet-screen-width: "screen and (min-width: 720px)";
+
+// Sizes gotten from https://v4-alpha.getbootstrap.com/layout/grid/
+$extra-small-width: "screen and (max-width: 539px)"; // 540px - 1px
+$small-width: "screen and (min-width: 540px)";
+$medium-width: "screen and (min-width: 720px)";
+$large-width: "screen and (min-width: 960px)";
+$extra-large-width: "screen and (min-width: 1140px)";
+
+$mobile-width: "screen and (max-width: 719px)"; // 720px - 1px

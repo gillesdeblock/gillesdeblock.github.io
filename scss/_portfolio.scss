@@ -1,0 +1,92 @@
+.portfolio-container {
+    position: relative;
+    height: 100vh;
+    background-color: $light-blue;
+
+    @media #{medium-width} {
+        padding: 1rem;
+    }
+
+    h1, h2, h3, h4, h5 {
+        color: black;
+    }
+
+    .recent-work {
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.75);
+        overflow: hidden;
+
+        @media #{$mobile-width} {
+            height: 100vh;
+        }
+
+        @media #{$medium-width} {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 90%;
+            width: 80%;
+            min-width: calc(250px + 2 * 20px); // title + padding both sides
+        }
+
+        .work-list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            margin: 0 .5rem;
+            overflow-x: hidden;
+
+            @media #{$mobile-width} {
+                max-height: 90%;
+                overflow-y: auto;
+            }
+            @media #{$medium-width} {
+                max-height: 650px;
+            }
+
+            .work-item {
+                max-width: 280px;
+                flex: 0 0 auto;
+                margin-bottom: 1rem;
+                padding: 0 1rem;
+                border-radius: 5px;
+                text-align: center;
+
+                h3 {
+                    width: 75%;
+                    margin: 0 auto;
+                    margin-bottom: 1rem;
+                    padding-bottom: .5rem;
+                    font-size: 22px;
+                    color: black;
+                    border-bottom: 3px solid black;
+                }
+                p {
+                    overflow-y: auto;
+                    margin-bottom: 1rem;
+                }
+                a {
+                    text-align: center;
+                    background-color: rgb(25, 232, 89);
+                    color: white;
+                    padding: .5rem .25rem;
+                    transition: background-color .2s ease-out;
+                    
+                    &:hover {
+                        background-color: rgb(25, 212, 89);
+                    }
+                }
+            }
+        }
+        h1 {
+            width: 250px;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+    }
+}
