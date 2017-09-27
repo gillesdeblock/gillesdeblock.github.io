@@ -18,8 +18,9 @@
             transform: translate(-50%, -50%);
         }
         
+        color: $dark-text;
         padding: 1rem;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(239, 239, 239, 0.5);
         overflow: hidden;
 
         .profile {
@@ -64,9 +65,7 @@
 
                 .title {
                     h1 {
-                        text-align: center;
-                        color: rgba(0, 0, 0, 0.75);
-                        border-bottom: 2px solid rgba(0, 0, 0, 0.75);;
+                        color: $dark-text;
                         margin-bottom: 16px;
                     }
                 }
@@ -91,7 +90,7 @@
         padding: 1rem;
         font-weight: 600;
         color: #01579B;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(239, 239, 239, 0.5);
         transition: color 0.2s, background-color 0.2s;
         
         @media #{$mobile-width} {
@@ -101,7 +100,7 @@
         &:hover {
             cursor: pointer;
             color: #0277BD;
-            background-color: rgba(255, 255, 255, 0.75);
+            background-color: rgba(239, 239, 239, 0.75);
         }
     }
 }

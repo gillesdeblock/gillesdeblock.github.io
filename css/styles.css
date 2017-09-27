@@ -5,8 +5,9 @@
   background-repeat: no-repeat;
   background-size: cover; }
   .intro-container .profile-container {
+    color: #3a3a3a;
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(239, 239, 239, 0.5);
     overflow: hidden; }
     @media screen and (max-width: 719px) {
       .intro-container .profile-container {
@@ -51,9 +52,7 @@
           .intro-container .profile-container .profile .profile-description {
             max-height: 250px; } }
         .intro-container .profile-container .profile .profile-description .title h1 {
-          text-align: center;
-          color: rgba(0, 0, 0, 0.75);
-          border-bottom: 2px solid rgba(0, 0, 0, 0.75);
+          color: #3a3a3a;
           margin-bottom: 16px; }
         @media screen and (max-width: 719px) {
           .intro-container .profile-container .profile .profile-description .content {
@@ -69,7 +68,7 @@
     padding: 1rem;
     font-weight: 600;
     color: #01579B;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(239, 239, 239, 0.5);
     transition: color 0.2s, background-color 0.2s; }
     @media screen and (max-width: 719px) {
       .intro-container .portfolio-btn {
@@ -77,20 +76,18 @@
     .intro-container .portfolio-btn:hover {
       cursor: pointer;
       color: #0277BD;
-      background-color: rgba(255, 255, 255, 0.75); }
+      background-color: rgba(239, 239, 239, 0.75); }
 
 .portfolio-container {
   position: relative;
   height: 100vh;
-  background-color: #C4E7FC; }
+  background-color: #efefef;
+  color: #8a8a8a; }
   @media medium-width {
     .portfolio-container {
       padding: 1rem; } }
-  .portfolio-container h1, .portfolio-container h2, .portfolio-container h3, .portfolio-container h4, .portfolio-container h5 {
-    color: black; }
   .portfolio-container .recent-work {
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.75);
     overflow: hidden; }
     @media screen and (max-width: 719px) {
       .portfolio-container .recent-work {
@@ -102,16 +99,23 @@
         left: 50%;
         transform: translate(-50%, -50%);
         max-height: 90%;
-        width: 80%;
+        width: 90%;
         min-width: calc(250px + 2 * 20px); } }
+    .portfolio-container .recent-work h1 {
+      width: 300px;
+      margin: 0 auto;
+      color: #6f6f6f;
+      font-size: 42px;
+      margin-bottom: 2rem;
+      text-align: center; }
     .portfolio-container .recent-work .work-list {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: center;
       align-items: stretch;
-      flex-wrap: wrap;
       margin: 0 .5rem;
+      padding: 2rem 1rem;
       overflow-x: hidden; }
       @media screen and (max-width: 719px) {
         .portfolio-container .recent-work .work-list {
@@ -119,38 +123,29 @@
           overflow-y: auto; } }
       @media screen and (min-width: 720px) {
         .portfolio-container .recent-work .work-list {
-          max-height: 650px; } }
+          max-height: 650px;
+          background-color: #caebf2; } }
       .portfolio-container .recent-work .work-list .work-item {
         max-width: 280px;
         flex: 0 0 auto;
         margin-bottom: 1rem;
         padding: 0 1rem;
-        border-radius: 5px;
-        text-align: center; }
+        border-radius: 5px; }
         .portfolio-container .recent-work .work-list .work-item h3 {
-          width: 75%;
-          margin: 0 auto;
           margin-bottom: 1rem;
-          padding-bottom: .5rem;
-          font-size: 22px;
-          color: black;
-          border-bottom: 3px solid black; }
+          font-size: 25px;
+          color: #6f6f6f; }
         .portfolio-container .recent-work .work-list .work-item p {
           overflow-y: auto;
           margin-bottom: 1rem; }
         .portfolio-container .recent-work .work-list .work-item a {
           text-align: center;
-          background-color: #19e859;
+          background-color: #75d18d;
           color: white;
           padding: .5rem .25rem;
-          transition: background-color .2s ease-out; }
+          transition: background-color .2s linear; }
           .portfolio-container .recent-work .work-list .work-item a:hover {
-            background-color: #19d459; }
-    .portfolio-container .recent-work h1 {
-      width: 250px;
-      margin: 0 auto;
-      margin-bottom: 1rem;
-      text-align: center; }
+            background-color: #75c28d; }
 
 * {
   margin: 0;
@@ -191,7 +186,7 @@ p {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #1A1A1A;
+  background-color: #3a3a3a;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
 
 /*# sourceMappingURL=styles.css.map */

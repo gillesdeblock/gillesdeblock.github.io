@@ -1,19 +1,15 @@
 .portfolio-container {
     position: relative;
     height: 100vh;
-    background-color: $light-blue;
+    background-color: $light-gray;
+    color: $light-text;
 
     @media #{medium-width} {
         padding: 1rem;
     }
 
-    h1, h2, h3, h4, h5 {
-        color: black;
-    }
-
     .recent-work {
         padding: 20px;
-        background-color: rgba(255, 255, 255, 0.75);
         overflow: hidden;
 
         @media #{$mobile-width} {
@@ -26,18 +22,26 @@
             left: 50%;
             transform: translate(-50%, -50%);
             max-height: 90%;
-            width: 80%;
+            width: 90%;
             min-width: calc(250px + 2 * 20px); // title + padding both sides
         }
 
+        h1 {
+            width: 300px;
+            margin: 0 auto;
+            color: #6f6f6f;
+            font-size: 42px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
         .work-list {
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
             justify-content: center;
             align-items: stretch;
-            flex-wrap: wrap;
             margin: 0 .5rem;
+            padding: 2rem 1rem;
             overflow-x: hidden;
 
             @media #{$mobile-width} {
@@ -46,6 +50,7 @@
             }
             @media #{$medium-width} {
                 max-height: 650px;
+                background-color: rgba(202, 235, 242, 1);
             }
 
             .work-item {
@@ -54,16 +59,11 @@
                 margin-bottom: 1rem;
                 padding: 0 1rem;
                 border-radius: 5px;
-                text-align: center;
 
                 h3 {
-                    width: 75%;
-                    margin: 0 auto;
                     margin-bottom: 1rem;
-                    padding-bottom: .5rem;
-                    font-size: 22px;
-                    color: black;
-                    border-bottom: 3px solid black;
+                    font-size: 25px;
+                    color: #6f6f6f;
                 }
                 p {
                     overflow-y: auto;
@@ -71,22 +71,16 @@
                 }
                 a {
                     text-align: center;
-                    background-color: rgb(25, 232, 89);
+                    background-color: $watermelon-red;
                     color: white;
                     padding: .5rem .25rem;
-                    transition: background-color .2s ease-out;
+                    transition: background-color .2s linear;
                     
                     &:hover {
-                        background-color: rgb(25, 212, 89);
+                        background-color: $watermelon-red-dark;
                     }
                 }
             }
-        }
-        h1 {
-            width: 250px;
-            margin: 0 auto;
-            margin-bottom: 1rem;
-            text-align: center;
         }
     }
 }
