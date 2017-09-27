@@ -115,15 +115,16 @@
       justify-content: center;
       align-items: stretch;
       margin: 0 .5rem;
-      padding: 2rem 1rem;
       overflow-x: hidden; }
       @media screen and (max-width: 719px) {
         .portfolio-container .recent-work .work-list {
-          max-height: 90%;
+          max-height: 85%;
+          padding: 0s 1rem;
           overflow-y: auto; } }
       @media screen and (min-width: 720px) {
         .portfolio-container .recent-work .work-list {
           max-height: 650px;
+          padding: 2rem 1rem;
           background-color: #caebf2; } }
       .portfolio-container .recent-work .work-list .work-item {
         max-width: 280px;

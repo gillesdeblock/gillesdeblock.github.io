@@ -41,15 +41,16 @@
             justify-content: center;
             align-items: stretch;
             margin: 0 .5rem;
-            padding: 2rem 1rem;
             overflow-x: hidden;
 
             @media #{$mobile-width} {
-                max-height: 90%;
+                max-height: 85%;
+                padding: 0s 1rem;
                 overflow-y: auto;
             }
             @media #{$medium-width} {
                 max-height: 650px;
+                padding: 2rem 1rem;
                 background-color: rgba(202, 235, 242, 1);
             }
 
