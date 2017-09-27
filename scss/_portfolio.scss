@@ -45,7 +45,7 @@
 
             @media #{$mobile-width} {
                 max-height: 85%;
-                padding: 0s 1rem;
+                padding: 0 1rem;
                 overflow-y: auto;
             }
             @media #{$medium-width} {

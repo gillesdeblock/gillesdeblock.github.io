@@ -119,7 +119,7 @@
       @media screen and (max-width: 719px) {
         .portfolio-container .recent-work .work-list {
           max-height: 85%;
-          padding: 0s 1rem;
+          padding: 0 1rem;
           overflow-y: auto; } }
       @media screen and (min-width: 720px) {
         .portfolio-container .recent-work .work-list {
