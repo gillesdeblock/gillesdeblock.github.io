@@ -1,11 +1,15 @@
 .portfolio-container {
     position: relative;
     height: 100vh;
-    background-color: $light-gray;
-    color: $light-text;
+    color: $dark-blue;
 
-    @media #{medium-width} {
+    @media #{$mobile-width} {
+        background-color: #1c6ca5;
+    }
+
+    @media #{$medium-width} {
         padding: 1rem;
+        background-color: $dark-blue;
     }
 
     .recent-work {
@@ -27,58 +31,74 @@
         }
 
         h1 {
-            width: 300px;
-            margin: 0 auto;
-            color: #6f6f6f;
             font-size: 42px;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+            color: $light-gray;
             text-align: center;
         }
         .work-list {
+            height: 100%;
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            justify-content: center;
             align-items: stretch;
             margin: 0 .5rem;
             overflow-x: hidden;
 
             @media #{$mobile-width} {
+                justify-content: center;
                 max-height: 85%;
-                padding: 0 1rem;
                 overflow-y: auto;
             }
+
             @media #{$medium-width} {
+                justify-content: space-around;
                 max-height: 650px;
                 padding: 2rem 1rem;
-                background-color: rgba(202, 235, 242, 1);
             }
 
             .work-item {
+                display: flex;
+                flex-direction: column;
+                flex: 1 0 auto;
                 max-width: 280px;
-                flex: 0 0 auto;
                 margin-bottom: 1rem;
-                padding: 0 1rem;
-                border-radius: 5px;
+                background-color: $light-gray;
+                color: $dark-blue;
 
-                h3 {
-                    margin-bottom: 1rem;
+                @media #{$mobile-width} {
+                    max-width: 90%;
+                }
+
+                .title {
                     font-size: 25px;
-                    color: #6f6f6f;
-                }
-                p {
-                    overflow-y: auto;
                     margin-bottom: 1rem;
+                    padding: .5rem 1rem;
+                    background-color: $sky-blue;
+                    color: $light-gray;
                 }
-                a {
-                    text-align: center;
-                    background-color: $watermelon-red;
-                    color: white;
-                    padding: .5rem .25rem;
-                    transition: background-color .2s linear;
-                    
-                    &:hover {
-                        background-color: $watermelon-red-dark;
+                .content {
+                    position: relative;
+                    flex: 1 0 auto;
+
+                    p {
+                        padding: 0 1rem;
+                        padding-bottom: 3rem;
+                        overflow-y: auto;
+                    }
+                    a {
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        padding: .5rem .25rem;
+                        text-align: center;
+                        color: $light-gray;
+                        background-color: $sky-blue;
+                        transition: background-color .2s linear;
+                        
+                        &:hover {
+                            background-color: $darker-sky-blue;
+                        }
                     }
                 }
             }

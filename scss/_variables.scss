@@ -1,10 +1,13 @@
 // Colors
-$light-blue: rgba(202, 235, 255, 1);
 $light-gray: #efefef;
-$dark-text: #3a3a3a;
-$light-text: #8a8a8a;
-$watermelon-red: #75d18d;
-$watermelon-red-dark: rgb(117, 194, 141);
+$link-color: #5fb7f9;
+
+$dark-blue: #18547F;
+$gray-blue: #3E647F;
+$sky-blue: #30A7FF;
+$darker-sky-blue: hsl(206, 100%, 54%);
+$light-blue: #7CC8FF;
+$blue: #2686CC;
 
 // Widths, Media Queries...
 $mobile-screen-width: "screen and (max-width: 720px)";

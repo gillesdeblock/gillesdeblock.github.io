@@ -1,41 +1,41 @@
 .intro-container {
     position: relative;
     height: 100vh;
-    background-image: url("../img/bg_canada_train.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    
+    @media #{$mobile-width} {
+        background-color: $dark-blue;
+        color: $light-gray;
+    }
+
+    @media #{$medium-width} {
+        background-image: url("../img/profile_pic.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
     .profile-container {
-        @media #{$mobile-width} {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-        }
-        @media #{$medium-width} {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        color: $dark-text;
+        position: relative;
+        height: 100vh;
+        width: 100%;        
+        color: $light-gray;
         padding: 1rem;
-        background-color: rgba(239, 239, 239, 0.5);
+        background-color: rgba(24, 84, 127, 0.7);
         overflow: hidden;
 
         .profile {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-
             @media #{$mobile-width} {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            @media #{$medium-width} {
                 position: absolute;
                 top: 50%;
+                left: 10%;
+                width: 80%;
                 transform: translateY(-50%);
-            }
-            @media #{$medium-width} {
-                flex-direction: row;
             }
             
             .profile-image {
@@ -47,6 +47,10 @@
 
                 @media #{$mobile-width} {
                     margin-bottom: 1rem;
+                }
+
+                @media #{$medium-width} {
+                    display: none;
                 }
 
                 img {
@@ -65,13 +69,13 @@
 
                 .title {
                     h1 {
-                        color: $dark-text;
+                        color: $light-gray;
                         margin-bottom: 16px;
                     }
                 }
                 .content {
                     @media #{$mobile-width} {
-                        max-height: 200px;
+                        max-height: 35%;
                         overflow-y: auto;
                     }
 
@@ -89,7 +93,7 @@
         transform: translateX(-50%);
         padding: 1rem;
         font-weight: 600;
-        color: #01579B;
+        color: $blue;
         background-color: rgba(239, 239, 239, 0.5);
         transition: color 0.2s, background-color 0.2s;
         
@@ -99,8 +103,8 @@
             
         &:hover {
             cursor: pointer;
-            color: #0277BD;
             background-color: rgba(239, 239, 239, 0.75);
+            color: $sky-blue;
         }
     }
 }
