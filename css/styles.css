@@ -54,13 +54,17 @@
           max-height: 250px; } }
       .intro-container .profile-container .profile .profile-description .title h1 {
         color: #efefef;
-        margin-bottom: 16px; }
+        margin-bottom: 16px;
+        font-size: 2.5rem; }
       @media screen and (max-width: 719px) {
         .intro-container .profile-container .profile .profile-description .content {
           max-height: 35%;
           overflow-y: auto; } }
       .intro-container .profile-container .profile .profile-description .content p {
+        font-size: 1.2rem;
         margin-bottom: 8px; }
+        .intro-container .profile-container .profile .profile-description .content p:last-of-type a {
+          display: inline-block; }
   .intro-container .portfolio-btn {
     position: absolute;
     left: 50%;
@@ -68,16 +72,15 @@
     transform: translateX(-50%);
     padding: 1rem;
     font-weight: 600;
-    color: #2686CC;
-    background-color: rgba(239, 239, 239, 0.5);
+    color: #18547F;
+    background-color: rgba(239, 239, 239, 0.25);
     transition: color 0.2s, background-color 0.2s; }
     @media screen and (max-width: 719px) {
       .intro-container .portfolio-btn {
         display: none; } }
     .intro-container .portfolio-btn:hover {
       cursor: pointer;
-      background-color: rgba(239, 239, 239, 0.75);
-      color: #30A7FF; }
+      background-color: rgba(239, 239, 239, 0.4); }
 
 .portfolio-container {
   position: relative;
