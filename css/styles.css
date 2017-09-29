@@ -9,7 +9,8 @@
     .intro-container {
       background-image: url("../img/profile_pic.jpg");
       background-repeat: no-repeat;
-      background-size: cover; } }
+      background-size: cover;
+      background-position: center center; } }
   .intro-container .profile-container {
     position: relative;
     height: 100vh;
@@ -214,5 +215,9 @@ p {
   border-radius: 8px;
   background-color: #3a3a3a;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+
+::selection {
+  background-color: #3E647F;
+  color: #efefef; }
 
 /*# sourceMappingURL=styles.css.map */
