@@ -63,7 +63,8 @@
           overflow-y: auto; } }
       .intro-container .profile-container .profile .profile-description .content p {
         font-size: 1.2rem;
-        margin-bottom: 8px; }
+        margin-bottom: 8px;
+        line-height: 1.35; }
         .intro-container .profile-container .profile .profile-description .content p:last-of-type a {
           display: inline-block; }
   .intro-container .portfolio-btn {
@@ -85,7 +86,7 @@
 
 .portfolio-container {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   color: #18547F; }
   @media screen and (max-width: 719px) {
     .portfolio-container {
@@ -95,67 +96,80 @@
       padding: 1rem;
       background-color: #18547F; } }
   .portfolio-container .recent-work {
-    padding: 20px;
-    overflow: hidden; }
-    @media screen and (max-width: 719px) {
-      .portfolio-container .recent-work {
-        height: 100vh; } }
+    padding: 2rem 1rem;
+    overflow-x: hidden;
+    text-align: center; }
     @media screen and (min-width: 720px) {
       .portfolio-container .recent-work {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-height: 90%;
-        width: 90%;
+        margin: 0 auto;
+        width: 75%;
         min-width: calc(250px + 2 * 20px); } }
     .portfolio-container .recent-work h1 {
+      position: relative;
+      display: inline;
       font-size: 42px;
-      margin-bottom: 1rem;
-      color: #efefef;
-      text-align: center; }
+      padding-bottom: .25rem;
+      color: #efefef; }
+      .portfolio-container .recent-work h1:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 20%;
+        height: 1px;
+        width: 60%;
+        border-bottom: 3px solid #30A7FF; }
     .portfolio-container .recent-work .work-list {
-      height: 100%;
+      width: 100%;
       display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      align-items: stretch;
-      margin: 0 .5rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
       overflow-x: hidden; }
-      @media screen and (max-width: 719px) {
-        .portfolio-container .recent-work .work-list {
-          justify-content: center;
-          max-height: 85%;
-          overflow-y: auto; } }
       @media screen and (min-width: 720px) {
         .portfolio-container .recent-work .work-list {
-          justify-content: space-around;
-          max-height: 650px;
           padding: 2rem 1rem; } }
       .portfolio-container .recent-work .work-list .work-item {
+        position: relative;
         display: flex;
         flex-direction: column;
         flex: 1 0 auto;
-        max-width: 280px;
-        margin-bottom: 1rem;
+        margin-bottom: 6rem;
         background-color: #efefef;
-        color: #18547F; }
+        color: #18547F;
+        text-align: left; }
         @media screen and (max-width: 719px) {
           .portfolio-container .recent-work .work-list .work-item {
             max-width: 90%; } }
-        .portfolio-container .recent-work .work-list .work-item .title {
-          font-size: 25px;
-          margin-bottom: 1rem;
-          padding: .5rem 1rem;
-          background-color: #30A7FF;
-          color: #efefef; }
+        .portfolio-container .recent-work .work-list .work-item:not(:last-of-type):before {
+          content: "";
+          position: absolute;
+          bottom: -3rem;
+          left: 40%;
+          height: 1px;
+          width: 20%;
+          border-bottom: 3px solid #efefef; }
         .portfolio-container .recent-work .work-list .work-item .content {
           position: relative;
           flex: 1 0 auto; }
-          .portfolio-container .recent-work .work-list .work-item .content p {
+          .portfolio-container .recent-work .work-list .work-item .content .title {
+            color: #efefef;
+            font-size: 25px;
+            padding: .5rem 1rem;
+            background-color: #30A7FF; }
+          .portfolio-container .recent-work .work-list .work-item .content .screenshot {
+            color: #efefef;
+            width: 100%;
+            margin-bottom: 1rem; }
+          .portfolio-container .recent-work .work-list .work-item .content p, .portfolio-container .recent-work .work-list .work-item .content h4 {
             padding: 0 1rem;
-            padding-bottom: 3rem;
             overflow-y: auto; }
+          .portfolio-container .recent-work .work-list .work-item .content h4 {
+            margin-bottom: .5rem; }
+          .portfolio-container .recent-work .work-list .work-item .content p {
+            margin-bottom: 1rem; }
+            .portfolio-container .recent-work .work-list .work-item .content p:last-of-type {
+              margin-bottom: 3rem; }
           .portfolio-container .recent-work .work-list .work-item .content a {
             position: absolute;
             bottom: 0;
@@ -167,6 +181,17 @@
             transition: background-color .2s linear; }
             .portfolio-container .recent-work .work-list .work-item .content a:hover {
               background-color: #1499ff; }
+
+.footer {
+  padding: 1rem 2rem;
+  background-color: #1B1B1B;
+  color: #efefef; }
+  .footer .info {
+    margin-bottom: .5rem; }
+  .footer .social-media .social-media-link {
+    display: inline-block; }
+    .footer .social-media .social-media-link img {
+      height: 24px; }
 
 * {
   margin: 0;

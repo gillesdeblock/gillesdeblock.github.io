@@ -1,6 +1,6 @@
 .portfolio-container {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     color: $dark-blue;
 
     @media #{$mobile-width} {
@@ -13,79 +13,103 @@
     }
 
     .recent-work {
-        padding: 20px;
-        overflow: hidden;
-
-        @media #{$mobile-width} {
-            height: 100vh;
-        }
+        padding: 2rem 1rem;;
+        overflow-x: hidden;
+        text-align: center;
 
         @media #{$medium-width} {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-height: 90%;
-            width: 90%;
+            margin: 0 auto;
+            width: 75%;
             min-width: calc(250px + 2 * 20px); // title + padding both sides
         }
 
         h1 {
+            position: relative;
+            display: inline; // Behave as text element, don't take full width
             font-size: 42px;
-            margin-bottom: 1rem;
+            padding-bottom: .25rem;
             color: $light-gray;
-            text-align: center;
+            
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 20%;
+                height: 1px;
+                width: 60%;
+                border-bottom: 3px solid $sky-blue;
+            }
         }
         .work-list {
-            height: 100%;
+            width: 100%;
             display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            align-items: stretch;
-            margin: 0 .5rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
             overflow-x: hidden;
 
-            @media #{$mobile-width} {
-                justify-content: center;
-                max-height: 85%;
-                overflow-y: auto;
-            }
-
             @media #{$medium-width} {
-                justify-content: space-around;
-                max-height: 650px;
                 padding: 2rem 1rem;
             }
 
             .work-item {
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 flex: 1 0 auto;
-                max-width: 280px;
-                margin-bottom: 1rem;
+                margin-bottom: 6rem;
                 background-color: $light-gray;
                 color: $dark-blue;
+                text-align: left;
 
                 @media #{$mobile-width} {
                     max-width: 90%;
                 }
 
-                .title {
-                    font-size: 25px;
-                    margin-bottom: 1rem;
-                    padding: .5rem 1rem;
-                    background-color: $sky-blue;
-                    color: $light-gray;
+                &:not(:last-of-type):before {
+                    content: "";
+                    position: absolute;
+                    bottom: -3rem;
+                    left: 40%;
+                    height: 1px;
+                    width: 20%;
+                    border-bottom: 3px solid #efefef;
                 }
+
                 .content {
                     position: relative;
-                    flex: 1 0 auto;
+                    flex: 1 0 auto; 
 
-                    p {
+                    .title {
+                        color: #efefef;
+                        font-size: 25px;
+                        padding: .5rem 1rem;
+                        background-color: $sky-blue;
+                    }
+
+                    .screenshot {
+                        color: $light-gray;
+                        width: 100%;
+                        margin-bottom: 1rem;
+                    }
+
+                    p, h4 {
                         padding: 0 1rem;
-                        padding-bottom: 3rem;
                         overflow-y: auto;
                     }
+
+                    h4 {
+                        margin-bottom: .5rem;
+                    }
+                    p {
+                        margin-bottom: 1rem;
+
+                        &:last-of-type {
+                            margin-bottom: 3rem;
+                        }
+                    }
+
                     a {
                         position: absolute;
                         bottom: 0;
