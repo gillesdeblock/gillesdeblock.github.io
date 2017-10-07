@@ -1,5 +1,0 @@
-@mixin margin-right($px) {
-    &:not(:last-of-type) {
-        margin-right: $px;
-    }
-}
