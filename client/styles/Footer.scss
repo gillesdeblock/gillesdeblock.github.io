@@ -1,0 +1,22 @@
+// Utils
+@import "variables";
+@import "mixins";
+
+.footer {
+    padding: 1rem 2rem;
+    background-color: #1B1B1B;
+    color: $light-gray;
+
+    .info {
+        margin-bottom: .5rem;
+    }
+    .social-media {
+        .social-media-link {
+            display: inline-block;
+            svg {
+                height: 32px;
+                fill: white;
+            }
+        }
+    }
+}
